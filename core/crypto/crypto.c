@@ -129,6 +129,7 @@ TEE_Result crypto_cipher_alloc_ctx(void **ctx, uint32_t algo)
 			res = crypto_aes_ecb_alloc_ctx(&c);
 			break;
 		case TEE_ALG_AES_CBC_NOPAD:
+		case TEE_ALG_AES_CBC_PKCS7:
 			res = crypto_aes_cbc_alloc_ctx(&c);
 			break;
 		case TEE_ALG_AES_CTR:
